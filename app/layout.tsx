@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono , Zen_Dots, Montserrat } from "next/font/google";
+import 'boxicons/css/boxicons.min.css';
 import "./globals.css";
+import Header from "@/components/header";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -9,6 +12,18 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const zenDots = Zen_Dots({
+  weight: "400",
+  variable: "--zen-dots",
+  subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  weight: "400",
+  variable: "--montserrat",
   subsets: ["latin"],
 });
 
@@ -25,9 +40,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${zenDots.variable} ${montserrat} antialiased bg-black`}
       >
+        <Header />
+        <main>
         {children}
+        </main>
       </body>
     </html>
   );
