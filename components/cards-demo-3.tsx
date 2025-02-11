@@ -1,6 +1,6 @@
 "use client";
 import { animate, motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { GoCopilot } from "react-icons/go";
 
@@ -67,10 +67,12 @@ const Skeleton = () => {
 
   useEffect(() => {
     animate(sequence, {
-      // @ts-ignore
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       repeat: Infinity,
       repeatDelay: 1,
     });
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
