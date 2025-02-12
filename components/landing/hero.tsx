@@ -39,8 +39,8 @@ const tools = [
       <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
         <h1 className="text-3xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
        
-        <FlipWords className="text-yellow-50" words={phrases} />
-        <FlipWords className="text-neutral-50" words={flipwords} />
+        <FlipWords className="text-yellow-50 text-center" words={phrases} />
+        <FlipWords className="text-neutral-50 text-center" words={flipwords} />
         </h1>
         <div className="my-10 font-normal text-lg text-neutral-300 max-w-lg text-center mx-auto">
         <span className="text-gray-300">

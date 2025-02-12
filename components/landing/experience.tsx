@@ -31,8 +31,6 @@ export function Experience() {
         My Professional Journey
         </Highlight>
       </motion.h1>
- 
-
     <WorkTimeline/>
     </HeroHighlight>
 

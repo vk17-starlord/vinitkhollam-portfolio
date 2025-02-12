@@ -13,8 +13,8 @@ export default function Header() {
   };
 
   return (
-    <motion.header className="relative bg-transparent top-0 z-50 py-2">
-      <nav className="container mx-auto flex items-center justify-between px-4">
+    <motion.header className=" w-full fixed  bg-transparent top-0 z-50 py-2">
+      <nav className="container mx-auto flex backdrop-blur-lg md:backdrop-blur-none items-center justify-between px-4">
         {/* Logo Section */}
         <Link href="/" className="flex items-center space-x-2">
           <Image
@@ -32,7 +32,7 @@ export default function Header() {
         </div>
 
         {/* Navigation Links for Desktop */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 group w-max px-10 list-none items-center justify-center gap-x-1 relative rounded-full border border-white/10 bg-white/5  py-5 backdrop-blur-lg lg:flex">
           {["Home", "About", "Blogs", "Contact"].map((item) => (
             <motion.div
               key={item}
@@ -42,10 +42,9 @@ export default function Header() {
             >
               <Link
                 href={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
-                className="text-white text-sm relative group"
+                className="text-white text-sm relative group hover:text-[16px] transition-all duration-150 ease-in-out"
               >
                 {item}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-gray-400 transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </motion.div>
           ))}
@@ -53,13 +52,13 @@ export default function Header() {
 
         {/* Social Icons for Desktop */}
         <div className="hidden md:flex space-x-4">
-          <a className="text-white text-2xl hover:text-3xl transition duration-150 ease-in-out" href="#">
+          <a className="text-white text-2xl hover:text-4xl transition-all duration-150 ease-in-out" href="#">
             <i className='bx bxl-linkedin-square'></i>
           </a>
-          <a className="text-white text-2xl hover:text-3xl transition duration-150 ease-in-out" href="#">
+          <a className="text-white text-2xl hover:text-4xl transition-all duration-150 ease-in-out" href="#">
             <i className='bx bxl-github'></i>
           </a>
-          <a className="text-white text-2xl hover:text-3xl transition duration-150 ease-in-out" href="#">
+          <a className="text-white text-2xl hover:text-4xl transition-all duration-150 ease-in-out" href="#">
             <i className='bx bxl-wordpress'></i>
           </a>
         </div>
