@@ -1,4 +1,5 @@
 import { About } from "@/components/landing/about";
+import { Experience } from "@/components/landing/experience";
 import Hero from "@/components/landing/hero";
 
  
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero/>
       <div className="container px-4 lg:px-0 mx-auto flex justify-center items-center flex-col">
       <About></About>
+      <Experience/>
       </div>
     </div>
 
