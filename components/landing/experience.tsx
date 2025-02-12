@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { StickyScroll } from "../ui/sticky-scroll-reveal";
 import { HeroHighlight, Highlight } from "../ui/hero-highlight";
 import { motion } from "framer-motion";
 import { WorkTimeline } from "./worktimeline";
